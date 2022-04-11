@@ -1,0 +1,75 @@
+*,
+body,
+h1,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #eae8fe;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 386px;
+    height: 180px;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+}
+
+.header .header-title {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main .container {
+    display: flex;
+    align-items: center;
+    width: 748px;
+    height: 100%;
+    gap: 28px;
+}
+
+.vending-machine {
+    width: 360px;
+    height: 545px;
+    background-color: white;
+    border: 2px solid red;
+}
+
+.vending-machine-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 12px;
+}
+
+.vending-machine-list .box {
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.172);
+}
+
+.my-status {
+    width: 360px;
+    height: 545px;
+    border: 2px solid red;
+}
