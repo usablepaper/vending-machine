@@ -65,6 +65,7 @@
                     <section class="push-money-section">
                         <input
                             type="text"
+                            onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
                             placeholder="입금액 입력"
                             class="push-money"
                         />
@@ -72,7 +73,7 @@
                     </section>
                     <section class="cart-section">
                         <div class="cart-container">
-                            <div class="selected-list">
+                            <div class="select-list">
                                 <ol class="selected-type-list">
                                     <li>
                                         <span class="selected-cola"
