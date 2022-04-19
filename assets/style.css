@@ -69,6 +69,11 @@ header {
 
 .box {
     position: relative;
+    background-repeat: no-repeat;
+    background-position: center 11px;
+    background-size: 35.86px 64.86px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .cola-name {
@@ -102,46 +107,28 @@ header {
     outline: 3px solid #6327fe;
 }
 
-.vending-machine-list .box:nth-child(1) {
+.box.Original_Cola {
     background-image: url(../images/Original_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
-.vending-machine-list .box:nth-child(2) {
+.box.Violet_Cola {
     background-image: url(../images/Violet_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
-.vending-machine-list .box:nth-child(3) {
+.box.Yellow_Cola {
     background-image: url(../images/Yellow_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
-.vending-machine-list .box:nth-child(4) {
+.box.Cool_Cola {
     background-image: url(../images/Cool_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
-.vending-machine-list .box:nth-child(5) {
+.box.Green_Cola {
     background-image: url(../images/Green_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
-.vending-machine-list .box:nth-child(6) {
+.box.Orange_Cola {
     background-image: url(../images/Orange_Cola.png);
-    background-repeat: no-repeat;
-    background-position: center 11px;
-    background-size: 35.86px 64.86px;
 }
 
 .changes-section {
@@ -339,6 +326,9 @@ header {
     margin-bottom: 6px;
     padding: 8px 8px 8px 0;
     font-weight: 500;
+    background-repeat: no-repeat;
+    background-position: 10.04px 6.04px;
+    background-size: 17.93px 32.93px;
 }
 
 .selected-container .selected-list {
@@ -359,32 +349,28 @@ header {
     font-weight: 500;
 }
 
-.selected-type-list li:nth-child(1) {
+.selected-type-list .Original_Cola {
     background-image: url(../images/Original_Cola.png);
-    background-repeat: no-repeat;
-    background-position: 10.04px 6.04px;
-    background-size: 17.93px 32.93px;
 }
 
-.selected-type-list li:nth-child(2) {
-    background-image: url(../images/Green_Cola.png);
-    background-repeat: no-repeat;
-    background-position: 10.04px 6.04px;
-    background-size: 17.93px 32.93px;
-}
-
-.selected-type-list li:nth-child(3) {
-    background-image: url(../images/Orange_Cola.png);
-    background-repeat: no-repeat;
-    background-position: 10.04px 6.04px;
-    background-size: 17.93px 32.93px;
-}
-
-.selected-type-list li:nth-child(4) {
+.selected-type-list .Violet_Cola {
     background-image: url(../images/Violet_Cola.png);
-    background-repeat: no-repeat;
-    background-position: 10.04px 6.04px;
-    background-size: 17.93px 32.93px;
+}
+
+.selected-type-list .Yellow_Cola {
+    background-image: url(../images/Yellow_Cola.png);
+}
+
+.selected-type-list .Cool_Cola {
+    background-image: url(../images/Cool_Cola.png);
+}
+
+.selected-type-list .Green_Cola {
+    background-image: url(../images/Green_Cola.png);
+}
+
+.selected-type-list .Orange_Cola {
+    background-image: url(../images/Orange_Cola.png);
 }
 
 .selected-cola {
@@ -405,4 +391,18 @@ header {
 
 .clicked {
     outline: 3px solid #6327fe;
+}
+
+.sold-out-img {
+    position: absolute;
+    background-color: #000000c8;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.sold-out:hover {
+    outline: 0 !important;
+    cursor: auto;
 }
