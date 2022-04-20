@@ -5,16 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ColaCola Vending Machine</title>
-        <link rel="stylesheet" href="./assets/style.css" />
-        <script defer src="./assets/main.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./reset.css" />
+        <script defer src="./main.js"></script>
     </head>
     <body>
         <header class="header">
-            <h1 class="header-title">ColaCola</h1>
+            <h1 class="hidden">ColaCola</h1>
         </header>
-        <main class="main">
-            <div class="container">
+        <main class="main-container">
+            <h2 class="hidden">ColaCola Vending Machine</h2>
+            <div class="machine-container">
                 <section class="vending-machine">
+                    <h3 class="hidden">음료를 고르고 획득할 수 있습니다.</h3>
                     <div class="vending-machine-list-container">
                         <ol class="vending-machine-list">
                             <li class="box Original_Cola">
@@ -61,6 +64,9 @@
                         </ol>
                     </div>
                     <section class="changes-section">
+                        <h4 class="hidden">
+                            잔액을 확인하고 거스름돈을 받을 수 있습니다.
+                        </h4>
                         <div class="changes">
                             <div>잔액 :</div>
                             <div>1,000원</div>
@@ -68,6 +74,9 @@
                         <button class="change-button">거스름돈 반환</button>
                     </section>
                     <section class="push-money-section">
+                        <h4 class="hidden">
+                            음료를 뽑기 위해 입금을 할 수 있습니다,
+                        </h4>
                         <input
                             type="text"
                             onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
@@ -77,6 +86,10 @@
                         <button class="push-money-button">입금</button>
                     </section>
                     <section class="cart-section">
+                        <h4 class="hidden">
+                            장바구니 입니다. 획득 버튼을 누르면 음료를 획득할 수
+                            있습니다.
+                        </h4>
                         <div class="cart-container">
                             <div class="select-list">
                                 <ol class="selected-type-list"></ol>
@@ -86,13 +99,18 @@
                     </section>
                 </section>
                 <section class="my-status">
+                    <h3 class="hidden">
+                        구매한 음료 목록과 소지금액을 확인할 수 있습니다.
+                    </h3>
                     <section class="my-money-section">
+                        <h4 class="hidden">현재 가지고 있는 잔액 입니다.</h4>
                         <div class="my-money">
                             <div>소지금 :</div>
                             <div>25,000원</div>
                         </div>
                     </section>
                     <section class="selected-container">
+                        <h4 class="hidden">구매한 음료 목록입니다.</h4>
                         <h2 class="selected-list-title">획득한 음료</h2>
                         <div class="selected-list-container">
                             <div class="selected-list"></div>

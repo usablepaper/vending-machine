@@ -16,7 +16,7 @@ body {
     background-color: #eae8fe;
 }
 
-header {
+.header {
     position: fixed;
     top: 0;
     left: 50%;
@@ -25,15 +25,10 @@ header {
     height: 180px;
     background-image: url("../images/logo.png");
     background-size: cover;
+    z-index: 10;
 }
 
-.header .header-title {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-.main {
+.main-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -42,7 +37,7 @@ header {
     height: 545px;
 }
 
-.main .container {
+.machine-container {
     display: flex;
     align-items: center;
     gap: 28px;
