@@ -6,7 +6,7 @@ const selectedTypeList = document.querySelector(".selected-type-list");
 
 boxs.forEach((box) => {
     box.addEventListener("click", () => {
-        const colaName = box.children[0].children[0].textContent;
+        const colaName = box.children[0].children[1].textContent;
         if (!box.classList.contains("sold-out")) {
             if (box.classList.contains("clicked")) {
                 document
@@ -16,14 +16,18 @@ boxs.forEach((box) => {
             } else {
                 box.classList.add("clicked");
                 const selectedCola = document.createElement("li");
+                const selectedColaImg = document.createElement("img");
                 const selectedColaName = document.createElement("span");
                 const selectedCount = document.createElement("div");
 
+                selectedColaImg.classList.add("selected-cola-img");
+                selectedColaImg.setAttribute("src", `./images/${colaName}.png`);
                 selectedCola.classList.add(colaName);
                 selectedColaName.classList.add("selected-cola");
                 selectedColaName.textContent = colaName;
                 selectedCount.classList.add("selected-count");
                 selectedCount.textContent = 1;
+                selectedCola.append(selectedColaImg);
                 selectedCola.append(selectedColaName);
                 selectedCola.append(selectedCount);
                 selectedTypeList.append(selectedCola);
