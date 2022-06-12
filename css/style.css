@@ -309,8 +309,21 @@ body {
 }
 
 .card-cola.soldout {
-  background-color: black;
+  position: relative;
   pointer-events: none;
+}
+
+.soldout::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/soldout.svg);
+  background-repeat: no-repeat;
+  z-index: 10;
 }
 
 .text-money {

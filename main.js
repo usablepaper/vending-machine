@@ -78,6 +78,10 @@ colaList.forEach((cola) => {
     addLi.appendChild(addTextColaPrice);
     if (cola.stock === 0) {
         addLi.classList.add("soldout");
+        let addSoldout = document.createElement("h3");
+        addSoldout.textContent = "품절된 상품입니다.";
+        addSoldout.classList.add("hidden");
+        addLi.appendChild(addSoldout);
     }
 });
 
@@ -181,6 +185,10 @@ domColas.forEach((domCola, i) => {
             // 솔드아웃처리
             if (colaList[i].stock < 1) {
                 domCola.classList.add("soldout");
+                let addSoldout = document.createElement("h3");
+                addSoldout.textContent = "품절된 상품입니다.";
+                addSoldout.classList.add("hidden");
+                domCola.appendChild(addSoldout);
             }
         }
     });
