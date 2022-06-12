@@ -5,150 +5,69 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ColaCola Vending Machine</title>
-        <link rel="stylesheet" href="./style.css" />
-        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
         <script defer src="./main.js"></script>
     </head>
     <body>
-        <header class="header">
-            <h1 class="hidden">ColaCola</h1>
-        </header>
-        <main class="main-container">
-            <h2 class="hidden">ColaCola Vending Machine</h2>
-            <div class="machine-container">
-                <section class="vending-machine">
-                    <h3 class="hidden">음료를 고르고 획득할 수 있습니다.</h3>
-                    <div class="vending-machine-list-container">
-                        <ol class="vending-machine-list">
-                            <li class="box Original_Cola">
-                                <ul>
-                                    <img
-                                        src="./images/Original_Cola.png"
-                                        alt="오리지널 콜라"
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Original_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                            </li>
-                            <li class="box Violet_Cola sold-out">
-                                <ul>
-                                    <img
-                                        src="./images/Violet_Cola.png"
-                                        alt="바이올렛 콜라"
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Violet_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                                <img
-                                    class="sold-out-img"
-                                    src="./images/Sold-out.svg"
-                                    alt="품절된 제품"
-                                />
-                            </li>
-                            <li class="box Yellow_Cola">
-                                <ul>
-                                    <img
-                                        src="./images/Yellow_Cola.png"
-                                        alt="옐로우 콜라"
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Yellow_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                            </li>
-                            <li class="box Cool_Cola">
-                                <ul>
-                                    <img
-                                        src="./images/Cool_Cola.png"
-                                        alt=" 쿨 콜라"
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Cool_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                            </li>
-                            <li class="box Green_Cola">
-                                <ul>
-                                    <img
-                                        src="./images/Green_Cola.png"
-                                        alt="그린 콜라"
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Green_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                            </li>
-                            <li class="box Orange_Cola">
-                                <ul>
-                                    <img
-                                        src="./images/Orange_Cola.png"
-                                        alt=""
-                                        class="cola-img"
-                                    />
-                                    <li class="cola-name">Orange_Cola</li>
-                                    <li class="cola-price">1000원</li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </div>
-                    <section class="changes-section">
-                        <h4 class="hidden">
-                            잔액을 확인하고 거스름돈을 받을 수 있습니다.
-                        </h4>
-                        <div class="changes">
-                            <div>잔액 :</div>
-                            <div>1,000원</div>
-                        </div>
-                        <button class="change-button">거스름돈 반환</button>
-                    </section>
-                    <section class="push-money-section">
-                        <h4 class="hidden">
-                            음료를 뽑기 위해 입금을 할 수 있습니다.
-                        </h4>
-                        <input
-                            type="text"
-                            onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
-                            placeholder="입금액 입력"
-                            class="push-money"
-                        />
-                        <button class="push-money-button">입금</button>
-                    </section>
-                    <section class="cart-section">
-                        <h4 class="hidden">
-                            장바구니 입니다. 획득 버튼을 누르면 음료를 획득할 수
-                            있습니다.
-                        </h4>
-                        <div class="cart-container">
-                            <div class="select-list">
-                                <ol class="selected-type-list"></ol>
+        <div>
+            <header class="header">
+                <h1 class="hidden">ColaCola</h1>
+            </header>
+            <main class="container-machine">
+                <h2 class="hidden">음료를 뽑는 자판기 기계입니다.</h2>
+                <div class="container-input">
+                    <section class="section-machine">
+                        <h3 class="hidden">
+                            음료를 선택하고 획득할 수 있습니다.
+                        </h3>
+                        <ul class="list-card-cola"></ul>
+                        <div class="wrapper-changes">
+                            <div class="status-changes">
+                                <strong class="text-money">
+                                    잔액:
+                                    <span class="text-money-num changes"></span>
+                                </strong>
                             </div>
+                            <button class="button-changes">
+                                거스름돈 반환
+                            </button>
                         </div>
-                        <button class="cart-get-button">획득</button>
-                    </section>
-                </section>
-                <section class="my-status">
-                    <h3 class="hidden">
-                        구매한 음료 목록과 소지금액을 확인할 수 있습니다.
-                    </h3>
-                    <section class="my-money-section">
-                        <h4 class="hidden">현재 가지고 있는 잔액 입니다.</h4>
-                        <div class="my-money">
-                            <div>소지금 :</div>
-                            <div>25,000원</div>
+                        <form class="wrapper-deposit" action="">
+                            <input
+                                type="text"
+                                onKeyup="this.value=this.value.replace(/[^0-9]/g,'');"
+                                placeholder="입금액 입력"
+                                class="deposit-amount"
+                            />
+                            <button class="button-deposit">입금</button>
+                        </form>
+                        <div class="wrapper-cart">
+                            <ol class="list-cart"></ol>
+                            <button class="button-get">획득</button>
                         </div>
                     </section>
-                    <section class="selected-container">
-                        <h4 class="hidden">구매한 음료 목록입니다.</h4>
-                        <h2 class="selected-list-title">획득한 음료</h2>
-                        <div class="selected-list-container">
-                            <div class="selected-list"></div>
+                </div>
+                <div class="container-output">
+                    <section class="section-my-money">
+                        <h3 class="hidden">현재 가지고 있는 잔액 입니다.</h3>
+                        <div class="wrapper-my-money">
+                            <strong class="text-money">
+                                소지금:
+                                <span class="text-money-num possess"></span
+                            ></strong>
                         </div>
-                        <h3 class="total">총금액 : 9,000원</h3>
                     </section>
-                </section>
-            </div>
-        </main>
+                    <section class="section-my-status">
+                        <h3 class="title-my-status">획득한 음료</h3>
+                        <ol class="list-my-status"></ol>
+                        <strong class="text-total"
+                            >총금액:
+                            <span class="text-total-num" data-total="0">0</span
+                            >원</strong
+                        >
+                    </section>
+                </div>
+            </main>
+        </div>
     </body>
 </html>
